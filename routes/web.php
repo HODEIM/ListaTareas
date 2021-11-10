@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\tareaControlador;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',  [tareaControlador::class, 'vista']);
+
+Route::post('/tarea', [tareaControlador::class, 'add'] );
+
+Route::delete('/tarea/{id}', [tareaControlador::class, 'delete']);
+
