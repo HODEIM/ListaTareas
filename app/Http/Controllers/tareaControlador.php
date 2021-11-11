@@ -9,7 +9,8 @@ class tareaControlador extends Controller
 {
     function vista()
     {
-        return view('tareas');
+        $consultaTareas= Tarea::get();
+        return view('tareas', ['queryprueba', 'PRUEBA']);
     }
     function add(Request $request)
     {

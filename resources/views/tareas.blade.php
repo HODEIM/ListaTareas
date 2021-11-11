@@ -12,6 +12,10 @@
             <input id="anadir" type="text" name="nombre">
             <input type="submit" value="new task">
 
+            @foreach ( $query  as $resultado)
+                <h1>{{ $resultado->nombre }}</h1>
+            @endforeach        
+
         </form>
     </body>
 </html>
