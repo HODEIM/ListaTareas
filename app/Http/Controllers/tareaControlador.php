@@ -10,7 +10,7 @@ class tareaControlador extends Controller
     function vista()
     {
         $consultaTareas= Tarea::get();
-        return view('tareas', ['queryprueba', 'PRUEBA']);
+        return view('tareas', ['tarea' => $consultaTareas]);
     }
     function add(Request $request)
     {
@@ -18,8 +18,9 @@ class tareaControlador extends Controller
             "nombre"=> $request->get("nombre")
         ]);
         return redirect("/");
-    }function delete()
+    }function delete($id)
     {
-        
+        Tarea::destroy($id);
+        return redirect("/");
     }
 }
