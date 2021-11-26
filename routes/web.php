@@ -13,7 +13,7 @@ use App\Http\Controllers\tareaControlador;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/ver',  [tareaControlador::class, 'ver']);
 
 Route::get('/',  [tareaControlador::class, 'vista']);
 

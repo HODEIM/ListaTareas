@@ -23,4 +23,8 @@ class tareaControlador extends Controller
         Tarea::destroy($id);
         return redirect("/");
     }
+    function ver() {
+        $consultaTareas= Tarea::get();
+        return view('verTareas', ['tarea' => $consultaTareas]);
+    }
 }
