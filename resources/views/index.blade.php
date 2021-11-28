@@ -33,12 +33,14 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="/vertareas">Ver Tareas</a>
                         <a class="nav-link active" href="/veranadir">Añadir Tarea</a>
+                        <a class="nav-link active" href="/vereliminar">Eliminar Tareas</a>
                     </div>
                 </div>
             </div>
         </nav>
         @yield('ver')
         @yield('anadir')
+        @yield('eliminar')
     </div>
 
 </body>

@@ -19,7 +19,8 @@ class tareaControlador extends Controller
         $consultaTareas = Tarea::get();
         return view('verTareas', ['tarea' => $consultaTareas]);
     }
-    function verAdd() {
+    function verAdd()
+    {
         return view('anadirTarea');
     }
 
@@ -30,6 +31,13 @@ class tareaControlador extends Controller
         ]);
         return redirect("/veranadir");
     }
+
+    function vereliminar()
+    {
+        $consultaTareas2 = Tarea::get();
+        return view('eliminartareas', ['tarea' => $consultaTareas2]);
+    }
+
     function delete($id)
     {
         Tarea::destroy($id);

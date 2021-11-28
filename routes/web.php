@@ -24,3 +24,8 @@ Route::post('/anadir', [tareaControlador::class, 'add'] );
 
 Route::delete('/tarea/{id}', [tareaControlador::class, 'delete']);
 
+Route::get('/vereliminar',  [tareaControlador::class, 'vereliminar']);
+
+Route::delete('/eliminar/{id}', [tareaControlador::class, 'delete']);
+
+
