@@ -13,11 +13,14 @@ use App\Http\Controllers\tareaControlador;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/ver',  [tareaControlador::class, 'ver']);
 
-Route::get('/',  [tareaControlador::class, 'vista']);
+Route::get('/',  [tareaControlador::class, 'index']);
 
-Route::post('/tarea', [tareaControlador::class, 'add'] );
+Route::get('/vertareas',  [tareaControlador::class, 'ver']);
+
+Route::get('/veranadir', [tareaControlador::class, 'veradd'] );
+
+Route::post('/anadir', [tareaControlador::class, 'add'] );
 
 Route::delete('/tarea/{id}', [tareaControlador::class, 'delete']);
 

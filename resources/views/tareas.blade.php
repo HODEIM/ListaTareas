@@ -10,7 +10,7 @@
 <body>
     <table>
 
-        <form method="POST" action="/tarea">
+        <form method="POST" action="/anadir">
             {{csrf_field()}}
             <h2>New Task</h2>
             <input id="anadir" type="text" name="nombre">

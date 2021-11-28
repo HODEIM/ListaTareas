@@ -7,24 +7,32 @@ use App\Models\Tarea;
 
 class tareaControlador extends Controller
 {
-    function vista()
+    function index()
     {
-        $consultaTareas= Tarea::get();
-        return view('tareas', ['tarea' => $consultaTareas]);
+        // $consultaTareas = Tarea::get();
+        // return view('tareas', ['tarea' => $consultaTareas]);
+        return view('index');
     }
+
+    function ver()
+    {
+        $consultaTareas = Tarea::get();
+        return view('verTareas', ['tarea' => $consultaTareas]);
+    }
+    function verAdd() {
+        return view('anadirTarea');
+    }
+
     function add(Request $request)
     {
         Tarea::create([
-            "nombre"=> $request->get("nombre")
+            "nombre" => $request->get("nombre")
         ]);
-        return redirect("/");
-    }function delete($id)
+        return redirect("/veranadir");
+    }
+    function delete($id)
     {
         Tarea::destroy($id);
-        return redirect("/");
-    }
-    function ver() {
-        $consultaTareas= Tarea::get();
-        return view('verTareas', ['tarea' => $consultaTareas]);
+        return redirect("/vertareas");
     }
 }

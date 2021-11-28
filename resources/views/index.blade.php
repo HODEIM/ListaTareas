@@ -10,9 +10,13 @@
             margin-left: auto;
             margin-right: auto;
         }
+        body {
+            background-color: black;
+            color: white;
+        }
     </style>
     <title>
-        Task List Hodei
+        Lista de Tareas Hodei
     </title>
 
 </head>
@@ -21,21 +25,20 @@
     <div class="tamaino">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid text-center">
-                <div class="navbar-brand" href="#">Task List</div>
+                <div class="navbar-brand m-auto" href="#"><h1>Lista de Tareas</h1></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active" aria-current="page" href="/vertareas">Ver Tareas</a>
+                        <a class="nav-link active" href="/veranadir">Añadir Tarea</a>
                     </div>
                 </div>
             </div>
         </nav>
         @yield('ver')
+        @yield('anadir')
     </div>
 
 </body>
