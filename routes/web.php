@@ -28,4 +28,7 @@ Route::get('/vereliminar',  [tareaControlador::class, 'vereliminar']);
 
 Route::delete('/eliminar/{id}', [tareaControlador::class, 'delete']);
 
+Route::get('/verbuscar', [tareaControlador::class, 'verbuscar']);
+
+Route::post('/buscar', [tareaControlador::class, 'buscar']);
 

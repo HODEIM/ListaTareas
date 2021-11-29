@@ -35,12 +35,21 @@ class tareaControlador extends Controller
     function vereliminar()
     {
         $consultaTareas2 = Tarea::get();
-        return view('eliminartareas', ['tarea' => $consultaTareas2]);
+        return view('eliminarTareas', ['tarea' => $consultaTareas2]);
     }
 
     function delete($id)
     {
         Tarea::destroy($id);
         return redirect("/vertareas");
+    }
+    function verbuscar(Request $request)
+    {
+        return view('buscarTarea');
+    }
+    function buscar(Request $request)
+    {
+        $resul = Tarea::where('nombre', 'like', '%'. $request->buscar. '%')->get();
+        return view('verbusquedatarea', ['tarea' => $resul]);
     }
 }

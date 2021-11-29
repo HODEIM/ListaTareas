@@ -34,6 +34,7 @@
                         <a class="nav-link active" aria-current="page" href="/vertareas">Ver Tareas</a>
                         <a class="nav-link active" href="/veranadir">Añadir Tarea</a>
                         <a class="nav-link active" href="/vereliminar">Eliminar Tareas</a>
+                        <a class="nav-link active" href="/verbuscar">Buscar Tareas</a>
                     </div>
                 </div>
             </div>
@@ -41,6 +42,7 @@
         @yield('ver')
         @yield('anadir')
         @yield('eliminar')
+        @yield('buscar')
     </div>
 
 </body>
