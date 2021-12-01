@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
 @section('ver')
 <div class="m-auto">
     <h1 class="bg-dark m-auto text-center">Tareas:</h1>

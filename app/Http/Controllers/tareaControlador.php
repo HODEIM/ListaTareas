@@ -11,7 +11,7 @@ class tareaControlador extends Controller
     {
         // $consultaTareas = Tarea::get();
         // return view('tareas', ['tarea' => $consultaTareas]);
-        return view('index');
+        return view('layouts.index');
     }
 
     function ver()

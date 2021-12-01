@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
 @section('eliminar')
 
 <div class="bg-secondary d-flex justify-content-center">

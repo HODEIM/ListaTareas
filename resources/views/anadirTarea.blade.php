@@ -1,4 +1,4 @@
-@extends('index')
+@extends('layouts.index')
 @section('ver')
 <div class="bg-secondary d-flex justify-content-center">
     <form method="POST" action="/anadir" class="p-5">
