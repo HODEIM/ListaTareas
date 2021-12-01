@@ -26,6 +26,9 @@ class tareaControlador extends Controller
 
     function add(Request $request)
     {
+        $request->validate([
+            'nombre' => 'required',
+        ]);
         Tarea::create([
             "nombre" => $request->get("nombre")
         ]);
@@ -49,7 +52,8 @@ class tareaControlador extends Controller
     }
     function buscar(Request $request)
     {
-        $resul = Tarea::where('nombre', 'like', '%'. $request->buscar. '%')->get();
+        $resul = Tarea::where('nombre', 'like', '%' . $request->buscar . '%')->get();
         return view('verbusquedatarea', ['tarea' => $resul]);
     }
+
 }

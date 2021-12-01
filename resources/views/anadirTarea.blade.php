@@ -9,6 +9,12 @@
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" id="anadir" name="nombre"><br>
             <input type="submit" value="Añadir" class="p-2 btn btn-info">
         </div>
+        @error('nombre')
+        <br>
+        <div class="alert alert-danger" role="alert">
+            Tienes que poner un nombre!!
+        </div>
+        @enderror
     </form>
 </div>
 @endsection
