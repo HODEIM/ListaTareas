@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tarea;
+use App\Models\Usuario;
 
 class tareaControlador extends Controller
 {
@@ -21,7 +22,8 @@ class tareaControlador extends Controller
     }
     function verAdd()
     {
-        return view('anadirTarea');
+        $usuarios = Usuario::all();
+        return view('anadirTarea', ['usuarios' => $usuarios]);
     }
 
     function add(Request $request)
