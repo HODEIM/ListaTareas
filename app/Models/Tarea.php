@@ -9,7 +9,8 @@ class Tarea extends Model
 {
     use HasFactory;
     protected $fillable = [ 
-        'nombre'
+        'nombre',
+        'id_usuario'
      ]; 
      public function usuario() {
          return $this->belongsTo("App\Models\Usuario");

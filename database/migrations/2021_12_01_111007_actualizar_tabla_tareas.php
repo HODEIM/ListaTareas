@@ -15,7 +15,7 @@ class ActualizarTablaTareas extends Migration
     {
         Schema::table('tareas', function (Blueprint $table) {
             $table->unsignedBigInteger("id_usuario");
-            $table->foreign("id_usuario")->references("id")->on("tareas")->onDelete("cascade")->onUpdate("cascade");
+            $table->foreign("id_usuario")->references("id")->on("usuarios")->onDelete("cascade")->onUpdate("cascade");
         });
     }
 

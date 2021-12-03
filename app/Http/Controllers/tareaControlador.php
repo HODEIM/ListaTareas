@@ -31,10 +31,12 @@ class tareaControlador extends Controller
         $request->validate([
             'nombre' => 'required',
         ]);
-        Tarea::create([
-            "nombre" => $request->get("nombre")
+       Tarea::create([
+            "nombre" => $request->get("nombre"),
+            "id_usuario" => $request->get("usuario")
         ]);
-        return redirect("/veranadir");
+           return redirect("/veranadir");
+        //return $request->get("usuario");
     }
 
     function vereliminar()
@@ -48,7 +50,7 @@ class tareaControlador extends Controller
         Tarea::destroy($id);
         return redirect("/vertareas");
     }
-    function verbuscar(Request $request)
+    function verbuscar()
     {
         return view('buscarTarea');
     }
@@ -58,4 +60,16 @@ class tareaControlador extends Controller
         return view('verbusquedatarea', ['tarea' => $resul]);
     }
 
+    function addUser(Request $request)
+    {
+        $request->validate([
+            'nombreUsuario' => 'required',
+            'apellidosUsuario' => 'required',
+        ]);
+        Usuario::create([
+            "nombre" => $request->get("nombreUsuario"),
+            "apellidos" => $request->get("apellidosUsuario")
+        ]);
+        return redirect("/veranadir");
+    }
 }

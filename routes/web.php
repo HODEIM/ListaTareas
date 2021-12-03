@@ -32,3 +32,5 @@ Route::get('/verbuscar', [tareaControlador::class, 'verbuscar']);
 
 Route::post('/buscar', [tareaControlador::class, 'buscar']);
 
+Route::post('/crearUsuario', [tareaControlador::class, 'addUser']);
+
