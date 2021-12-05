@@ -30,7 +30,9 @@ Route::delete('/eliminar/{id}', [tareaControlador::class, 'delete']);
 
 Route::get('/verbuscar', [tareaControlador::class, 'verbuscar']);
 
-Route::post('/buscar', [tareaControlador::class, 'buscar']);
+Route::post('/buscarfecha', [tareaControlador::class, 'buscarfecha']);
+
+Route::post('/buscarid', [tareaControlador::class, 'buscarPorId']);
 
 Route::post('/crearUsuario', [tareaControlador::class, 'addUser']);
 

@@ -53,12 +53,20 @@ class tareaControlador extends Controller
     }
     function verbuscar()
     {
-        return view('buscarTarea');
+        $usuarios = Usuario::get();
+        return view('buscarTarea', ['usuarios' => $usuarios]);
     }
-    function buscar(Request $request)
+    function buscarfecha(Request $request)
     {
-        $resul = Tarea::where('nombre', 'like', '%' . $request->buscar . '%')->get();
-        return view('verbusquedatarea', ['tarea' => $resul]);
+        $usuario = Usuario::get();
+        $resul = Tarea::where('created_at', 'like', '%'. $request->fecha. '%' )->get();
+        return view('verbusquedatarea', ['tarea' => $resul, 'usuarios' => $usuario]);
+    }
+    function buscarPorId(Request $request)
+    {
+        $usuario = Usuario::get();
+        $resul = Tarea::where('id_usuario', '=',  $request->usuario)->get();
+        return view('verbusquedatarea', ['tarea' => $resul, 'usuarios' => $usuario]);
     }
 
     function addUser(Request $request)
