@@ -17,8 +17,9 @@ class tareaControlador extends Controller
 
     function ver()
     {
-        $consultaTareas = Tarea::get();
-        return view('verTareas', ['tarea' => $consultaTareas]);
+        $tareas = Tarea::get();
+        $usuarios = Usuario::get();
+        return view('verTareas', ['tarea' => $tareas, 'usuarios' => $usuarios]);
     }
     function verAdd()
     {
