@@ -10,9 +10,17 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         body {
             background-color: black;
             color: white;
+
+            background-image: url("https://www.inconfundiblemente.com/wp-content/uploads/2019/10/glenn-carstens-peters-RLw-UC03Gwc-unsplash-1024x682.jpg");
+
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat, repeat;
+            background-size: cover;
         }
     </style>
     <title>
@@ -22,10 +30,13 @@
 </head>
 
 <body>
+
     <div class="tamaino">
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid text-center">
-                <div class="navbar-brand m-auto" href="#"><h1>Lista de Tareas</h1></div>
+                <div class="navbar-brand m-auto" href="#">
+                    <h1>Lista de Tareas</h1>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
