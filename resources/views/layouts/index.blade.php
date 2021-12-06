@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
         .tamaino {
-            width: 30%;
+            width: 50%;
             margin-left: auto;
             margin-right: auto;
         }
@@ -22,6 +22,16 @@
             background-repeat: no-repeat, repeat;
             background-size: cover;
         }
+
+        .fondoTabla {
+            background-color: #e6e6e6;
+        }
+
+
+        .subTamaino {
+            padding: 3vh;
+        }
+
     </style>
     <title>
         Lista de Tareas Hodei
@@ -41,7 +51,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
+                    <div class="navbar-nav text-end">
                         <a class="nav-link active" aria-current="page" href="/vertareas">Ver Tareas</a>
                         <a class="nav-link active" href="/veranadir">Añadir Tarea</a>
                         <a class="nav-link active" href="/vereliminar">Eliminar Tareas</a>

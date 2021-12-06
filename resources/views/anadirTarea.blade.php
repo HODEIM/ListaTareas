@@ -1,44 +1,95 @@
 @extends('layouts.index')
 @section('ver')
-<div class="bg-secondary">
-    <div class="d-flex justify-content-center mb-2">
-        <div class="col-6">
+<div class="subTamaino">
+    <table class="table table-bordered fondoTabla">
+        <thead>
+            <tr>
+                <th scope="col">Nueva Tarea</th>
+            </tr>
+        </thead>
+        <tbody>
             <form method="POST" action="/anadir" class="pt-5 px-5">
                 {{csrf_field()}}
-                <h1>Nueva Tarea</h1>
-                <div>
-                    <label for="formGroupExampleInput">Nombre:</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre" id="anadir" name="nombre">
-                    <label for="formGroupExampleInput">Seleccione un Usuario:</label>
-                    <select class="form-select" name="usuario">
-                        @foreach ($usuarios as $usuario)
-                        <option value={{$usuario->id}}>{{$usuario->nombre}}</option>
-                        @endforeach
-                    </select><br>
-                    <input type="submit" value="Añadir Tarea" class="pt-2 px-2 btn btn-info">
-                </div>
+                <tr>
+                    <td>Tarea:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Nombre" id="anadir" name="nombre">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Usuario:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-select" name="usuario">
+                            @foreach ($usuarios as $usuario)
+                            <option value={{$usuario->id}}>{{$usuario->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Añadir Tarea" class="pt-2 px-2 btn btn-outline-dark">
+                    </td>
+                </tr>
             </form>
-            <br>
-        </div>
-        <div class="col-6">
+            <tr>
+                <td>
+                    @error('nombre')
+                    <div class="alert alert-danger " role="alert">
+                        Añada el nombre de una Tarea
+                    </div>
+                    @enderror
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <table class="table table-bordered fondoTabla">
+        <thead>
+            <tr>
+                <th scope="col">Crear Usuario:</th>
+            </tr>
+        </thead>
+        <tbody>
             <form method="POST" action="/crearUsuario" class="pt-5 px-5">
                 {{csrf_field()}}
-                <h1>Añadir Usuario</h1>
-                <div>
-                    <label for="formGroupExampleInput">Nombre:</label>
-                    <input type="text" class="form-control" placeholder="Nombre" name="nombreUsuario">
-                    <label for="formGroupExampleInput">Nombre:</label>
-                    <input type="text" class="form-control" placeholder="Apellidos" name="apellidosUsuario"><br>
-                    <input type="submit" value="Crear Usuario" class="pt-2 px-2 btn btn-info">
-                </div>
+                <tr>
+                    <td>Nombre:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombreUsuario">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apellido:</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Apellidos" name="apellidosUsuario">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Crear Usuario" class="pt-2 px-2 btn btn-outline-dark">
+                    </td>
+                </tr>
             </form>
-        </div>
-    </div>
-    @error('nombre')
-
-    <div class="alert alert-danger m-2" role="alert">
-        Tienes que poner un nombre!!
-    </div><br>
-    @enderror
+            <tr>
+                <td>
+                    @error('nombreUsuario')
+                    <div class="alert alert-danger " role="alert">
+                        Rellene los datos del Usuario
+                    </div>
+                    @enderror
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 @endsection
