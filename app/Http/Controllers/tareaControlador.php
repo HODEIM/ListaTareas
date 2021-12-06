@@ -49,7 +49,7 @@ class tareaControlador extends Controller
     function delete($id)
     {
         Tarea::destroy($id);
-        return redirect("/vertareas");
+        return redirect("/vereliminar");
     }
     function verbuscar()
     {

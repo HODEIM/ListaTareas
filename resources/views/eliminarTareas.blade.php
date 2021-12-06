@@ -1,9 +1,15 @@
 @extends('layouts.index')
 @section('eliminar')
-<div class="m-auto">
-    <h1 class="bg-dark m-auto text-center">Eliminador de Tareas:</h1>
-    <table class="m-auto table table-striped table-dark">
-    @each('partials.botonEliminar', $tarea, 'tarea')
+<div class="m-auto subTamaino">
+    <table class="table table-hover table-striped m-auto fondoTabla">
+        <thead>
+            <tr>
+                <th colspan="2"><h2>Eliminar Tarea</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+        @each('partials.botonEliminar', $tarea, 'tarea')
+        </tbody>
     </table>
 </div>
 @endsection

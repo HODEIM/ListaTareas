@@ -1,17 +1,22 @@
 @extends('buscarTarea')
 @section('verbusqueda')
-<h1 class="bg-dark m-auto text-center">Resultado de tu búsqueda:</h1>
-@foreach ( $tarea as $resultado)
-<table class="m-auto table table-striped table-dark">
-    <form method="POST" action="/tarea/{{$resultado->id}}">
-        {{csrf_field()}}
-        @method('delete')
-        <tr>
-            <td>
-                <h5 style="text-align: center;">{{ $resultado->nombre }}</h5>
-            </td>
-        </tr>
-    </form>
-    @endforeach
-</table>
+<div>
+    <table class="table table-hover table-striped m-auto fondoTabla">
+        <thead>
+            <tr>
+                <th style="border-right: solid white;"><h2>Tarea:</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ( $tarea as $resultado)
+                    {{csrf_field()}}
+            <tr>
+                <td>
+                    <h5>{{ $resultado->nombre }}</h5>
+                    </td>
+            </tr>
+            @endforeach
+            </tbody>
+    </table>
+</div>
 @endsection

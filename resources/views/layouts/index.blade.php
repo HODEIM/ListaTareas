@@ -21,16 +21,33 @@
             background-position: center;
             background-repeat: no-repeat, repeat;
             background-size: cover;
+
+            
         }
 
         .fondoTabla {
             background-color: #e6e6e6;
+            box-shadow: 10px 10px 5px grey;
         }
 
+        table {
+            border-radius: 15px;
+        }
+
+        tr {
+            border: transparent;
+            
+        }
+
+        nav {
+            border-radius: 0px 0px 15px 15px;
+        }
+        
 
         .subTamaino {
             padding: 3vh;
         }
+       
 
     </style>
     <title>

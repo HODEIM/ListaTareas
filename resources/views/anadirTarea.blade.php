@@ -1,17 +1,17 @@
 @extends('layouts.index')
 @section('ver')
 <div class="subTamaino">
-    <table class="table table-bordered fondoTabla">
+    <table class="table fondoTabla">
         <thead>
             <tr>
-                <th scope="col">Nueva Tarea</th>
+                <th scope="col"><h2>Nueva Tarea</h2></th>
             </tr>
         </thead>
         <tbody>
             <form method="POST" action="/anadir" class="pt-5 px-5">
                 {{csrf_field()}}
                 <tr>
-                    <td>Tarea:</td>
+                    <td><h4>Tarea:</h4></td>
                 </tr>
                 <tr>
                     <td>
@@ -19,7 +19,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Usuario:</td>
+                    <td><h4>Usuario:</h4></td>
                 </tr>
                 <tr>
                     <td>
@@ -36,30 +36,22 @@
                     </td>
                 </tr>
             </form>
-            <tr>
-                <td>
-                    @error('nombre')
-                    <div class="alert alert-danger " role="alert">
-                        Añada el nombre de una Tarea
-                    </div>
-                    @enderror
-                </td>
-            </tr>
+            
         </tbody>
 
     </table>
 
-    <table class="table table-bordered fondoTabla">
+    <table class="table fondoTabla">
         <thead>
             <tr>
-                <th scope="col">Crear Usuario:</th>
+                <th scope="col"><h2>Crear Usuario:</h2></th>
             </tr>
         </thead>
         <tbody>
             <form method="POST" action="/crearUsuario" class="pt-5 px-5">
                 {{csrf_field()}}
                 <tr>
-                    <td>Nombre:</td>
+                    <td><h4>Nombre:</h4></td>
                 </tr>
                 <tr>
                     <td>
@@ -67,7 +59,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Apellido:</td>
+                    <td><h4>Apellido:</h4></td>
                 </tr>
                 <tr>
                     <td>
