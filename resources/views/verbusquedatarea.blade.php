@@ -4,7 +4,7 @@
     <table class="table table-hover table-striped m-auto fondoTabla">
         <thead>
             <tr>
-                <th style="border-right: solid white;"><h2>Tarea:</h2></th>
+                <th><h2>Tarea:</h2></th>
             </tr>
         </thead>
         <tbody>
